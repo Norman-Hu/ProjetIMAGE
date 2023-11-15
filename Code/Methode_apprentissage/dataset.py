@@ -1,0 +1,1 @@
+# Classe utile à la charge du dataset (ici de photos de visages d'hommes/de femmes)

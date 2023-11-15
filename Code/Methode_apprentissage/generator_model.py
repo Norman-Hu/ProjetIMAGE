@@ -1,0 +1,1 @@
+# Classe générateur (adversaire au discriminateur)

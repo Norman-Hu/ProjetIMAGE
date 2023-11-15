@@ -1,0 +1,1 @@
+# Classe utile à l'entrainement du modèle
