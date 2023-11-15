@@ -33,7 +33,7 @@ class Discriminator(nn.Module):
         layers = []
         in_channels = features[0]
         for feature in features[1:]:
-            layers.append(Block(in_channels, feature, stride=1 if feature==features[-1] else 2))
+            layers.append(Block(in_channels, feature, stride=1 if feature == features[-1] else 2))
             in_channels = feature
         layers.append(nn.Conv2d(in_channels, 1, kernel_size=4, stride=1, padding=1, padding_mode="reflect"))
         self.model = nn.Sequential(*layers)
@@ -41,12 +41,3 @@ class Discriminator(nn.Module):
     def forward(self, x):
         x = self.initial(x)
         return torch.sigmoid(self.model(x))
-
-def test():
-    x = torch.randn((5, 3, 256, 256))
-    model = Discriminator(in_channels=3)
-    preds = model(x)
-    print(preds.shape)
-
-if __name__ == "__main__":
-    test()
