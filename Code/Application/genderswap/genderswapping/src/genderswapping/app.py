@@ -7,13 +7,14 @@ from pathlib import Path
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, LEFT, RIGHT
+from toga import Image
 
 class Genderswapping(toga.App):
 
     async def action_open_file_filtered_dialog(self, widget):
         try:
             fname = await self.main_window.open_file_dialog(
-                "Open file with Toga", file_types=["doc", "txt"]
+                "Sélectionner une image", file_types=["png", "jpg"]
             )
             if fname is not None:
                 self.label.text = f"File to open: {fname}"
