@@ -15,12 +15,12 @@ class ImageApp(tk.Tk):
 
         # Premier onglet
         self.tab1 = ttk.Frame(self.tabControl)
-        self.tabControl.add(self.tab1, text='Onglet 1')
+        self.tabControl.add(self.tab1, text='Méthode traditionnelle')
         self.setup_tab1()
 
         # Deuxième onglet
         self.tab2 = ttk.Frame(self.tabControl)
-        self.tabControl.add(self.tab2, text='Onglet 2')
+        self.tabControl.add(self.tab2, text='Méthode par apprentissage')
         self.setup_tab2()
 
         self.tabControl.pack(expand=1, fill="both")
